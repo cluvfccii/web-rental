@@ -81,7 +81,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../Img/mobil2.jpg');
+    background-image: url('https://raw.githubusercontent.com/cluvfccii/web-rental/main/img/mobil2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
