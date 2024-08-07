@@ -82,7 +82,7 @@
     <?php
     include 'koneksi.php';
 
-    $sql = "SELECT m.id_mobil, m.nama_mobil, m.tahun, m.warna,j.nama_kategori
+    $sql = "SELECT m.id_mobil, m.nama_mobil, m.tahun, m.warna,j.nama_kategori, m.harga
             FROM mobil m 
             JOIN kategori j ON m.id_kategori = j.id_kategori";
     $result = $conn->query($sql);
@@ -97,6 +97,7 @@
             echo '<p>tahun: ' . $row["tahun"] . '</p>';
             echo '<p>warna: ' . $row["warna"] . '</p>';
             echo '<p>Kategori: ' . $row["nama_kategori"] . '</p>';
+            echo '<p>harga: ' . $row["harga"] . '</p>';
             echo '<a class="btn" href="datamobil.html?id=' . $row["id_mobil"] . '">Detail Mobil</a>';
             echo '</div>';
             echo '</div>';

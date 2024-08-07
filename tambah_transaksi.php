@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tambah Mobil</title>
+  <title>Tambah transaksi</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -45,28 +45,17 @@
 
 <body>
   <div class="container">
-    <h2>Tambah Mobil</h2>
+    <h2>Tambah transaksi</h2>
     <form action="proses_tambah.php" method="post">
-      <label for="nama_mobil">Merk</label>
-      <input type="text" id="nama_mobil" name="nama_mobil" required>
-
-      <label for="tahun">Warna</label>
-      <input type="text" id="warna" name="warna" required>
-
-      <label for="tahun">tahun</label>
-      <input type="text" id="tahun" name="tahun" required>
-
-      <label for="id_kategori">Jenis</label>
-      <select id="id_kategori" name="id_kategori" required>
-
-      
+      <label for="id_mobil">id_mobil</label>
+      <select id="id_mobil" name="id_mobil" required>
         <?php
         include 'koneksi.php';
-        $sql = "SELECT id_kategori, nama_kategori FROM kategori";
+        $sql = "SELECT id_mobil, nama_mobil FROM mobil";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo '<option value="'.$row['id_kategori'].'">'.$row['nama_kategori'].'</option>';
+                echo '<option value="'.$row['id_mobil'].'">'.$row['nama_mobil'].'</option>';
             }
         } else {
             echo '<option value="">Tidak ada jenis tersedia</option>';
@@ -74,8 +63,28 @@
         $conn->close();
         ?>
       </select>
-      <label for="harga">harga</label>
-      <input type="text" id="harga" name="harga" required>
+
+      <label for="id_customer">id_custumer</label>
+      <select id="id_customer" name="id_customer" required>
+      <?php
+        include 'koneksi.php';
+        $sql = "SELECT id_customer, nama_customer FROM customer";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo '<option value="'.$row['id_customer'].'">'.$row['id_customer'].'</option>';
+            }
+        } else {
+            echo '<option value="">Tidak ada jenis tersedia</option>';
+        }
+        $conn->close();
+        ?>
+      </select>
+      <label for="tgl_sewa">Tangga sewa</label>
+      <input type="date" id="tgl_sewa" name="tgl_sewa" required>
+
+      <label for="tgl_kembali">Tangga kembali</label>
+      <input type="date" id="tgl_kembali" name="tgl_kembali" required>
 
       <input type="submit" value="Tambah">
     </form>
