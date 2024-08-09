@@ -64,15 +64,15 @@
         ?>
       </select>
 
-      <label for="id_customer">id_custumer</label>
-      <select id="id_customer" name="id_customer" required>
+      <label for="id_customer">nama_custumer</label>
+      <select id="nama_customer" name="nama_customer" required>
       <?php
         include 'koneksi.php';
         $sql = "SELECT id_customer, nama_customer FROM customer";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo '<option value="'.$row['id_customer'].'">'.$row['id_customer'].'</option>';
+                echo '<option value="'.$row['id_customer'].'">'.$row['nama_customer'].'</option>';
             }
         } else {
             echo '<option value="">Tidak ada jenis tersedia</option>';
