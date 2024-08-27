@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])) {
  
 if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = hash('sha256', $_POST['password']); // Hash the input password using SHA-256
+    $password =($_POST['password']); // Hash the input password using SHA-256
  
     $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
