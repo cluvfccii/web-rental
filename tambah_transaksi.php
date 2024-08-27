@@ -1,3 +1,30 @@
+<style>
+    a {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px ;
+  cursor: pointer;
+}
+
+a {font-size: 10px;}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+</style>
 <?php
 include 'koneksi.php';
 

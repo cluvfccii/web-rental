@@ -89,7 +89,7 @@
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo '<div class="column">';
+            echo '<div class="column">'; 
             echo '<div class="card">';
             echo '<img src="#" alt="' . $row["nama_mobil"] . '">';
             echo '<div class="container">';
