@@ -3,6 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style5.css">
   <title>Mobil</title>
   <style>
     * {
@@ -71,10 +72,10 @@
       display: inline-block;
       margin-bottom: 20px;
     }
-  </style>
+</style>
 </head>
-
 <body>
+  
   <div class="container">
     <a class="btn-add" href="tambah.php">Tambah Mobil</a>
   </div>
@@ -91,7 +92,7 @@
         while($row = $result->fetch_assoc()) {
             echo '<div class="column">'; 
             echo '<div class="card">';
-            echo '<img src="#" alt="' . $row["nama_mobil"] . '">';
+            echo '<img src="img/d1.jpg" alt="' . $row["nama_mobil"] . '">';
             echo '<div class="container">';
             echo '<h4><b>' . $row["nama_mobil"] . '</b></h4>';
             echo '<p>tahun: ' . $row["tahun"] . '</p>';

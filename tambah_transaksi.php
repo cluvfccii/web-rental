@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
             <td>".$row["nama_customer"]."</td>
             <td>".$row["tgl_sewa"]."</td> 
             <td>".$row["tgl_kembali"]."</td>
-            <td><a href='edittransaksi.php?id=".$row["id_transaksi"]."'>Edit</a> | <a href='hapus_transaksi.php?id=".$row["id_transaksi"]."'>Hapus</a></td>
+            <td><a href='edit_transaksi.php?id=".$row["id_transaksi"]."'>Edit</a> | <a href='hapus_transaksi.php?id=".$row["id_transaksi"]."'>Hapus</a></td>
         </tr>";
     }
     echo "</table>";

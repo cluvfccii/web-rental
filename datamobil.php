@@ -3,8 +3,9 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style5.css">
   <style>
-    * {
+   * {
       box-sizing: border-box;
     }
 
@@ -59,6 +60,16 @@
     .card img {
       width: 100%;
       height: auto;
+    }
+
+    .btn-add {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -145,4 +156,5 @@
         </div>
       </div>
     </div>
+    </body>
 </html>
