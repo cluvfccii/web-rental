@@ -132,20 +132,22 @@ $result = $conn->query($sql);
                     <th>Tahun</th>
                     <th>Harga</th>
                     <th>Kategori</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row['id_mobil'] . "</td>";
-                        echo "<td>" . $row['nama_mobil'] . "</td>";
-                        echo "<td>" . $row['warna'] . "</td>";
-                        echo "<td>" . $row['tahun'] . "</td>";
-                        echo "<td>" . $row['harga'] . "</td>";
-                        echo "<td>" . $row['nama_kategori'] . "</td>";
-                        echo "</tr>";
+                        echo "<tr>
+                        <td>".$row["id_mobil"]."</td>
+                        <td>".$row["nama_mobil"]."</td>
+                        <td>".$row["warna"]."</td>
+                        <td>".$row["tahun"]."</td> 
+                        <td>".$row["harga"]."</td>
+                        <td>".$row["nama_kategori"]."</td>
+                        <td><a href='edit_mobil.php?id=".$row["id_mobil"]."'>Edit</a> | <a href='hapus_mobil.php?id=".$row["id_mobil"]."' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a></td>
+                    </tr>";
                     }
                 } else {
                     echo "<tr><td colspan='7'>Tidak ada data mobil yang ditemukan</td></tr>";
