@@ -54,7 +54,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
         <a href="#dashboard">Dashboard</a>
         <a href="data_mobil.php">Data Mobil</a>
         <a href="#customer">Data Customer</a>
-        <a href="tambahtrans.php">Data Transaksi</a>
+        <a href="tambah_transaksi.php">Data Transaksi</a>
         <a href="logout.php" onclick="confirmLogout(event)">Logout</a>
     </div>
 

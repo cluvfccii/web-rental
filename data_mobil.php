@@ -100,7 +100,7 @@ $result = $conn->query($sql);
         <a href="admin.php">Dashboard</a>
         <a href="data_mobil.php">Data Mobil</a>
         <a href="#customer">Data Customer</a>
-        <a href="tambahtrans.php">Data Transaksi</a>
+        <a href="tambah_transaksi.php">Data Transaksi</a>
         <a href="logout.php" onclick="confirmLogout(event)">Logout</a>
     </div>
 
@@ -132,7 +132,7 @@ $result = $conn->query($sql);
                     <th>Tahun</th>
                     <th>Harga</th>
                     <th>Kategori</th>
-                    <th></th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -146,7 +146,7 @@ $result = $conn->query($sql);
                         <td>".$row["tahun"]."</td> 
                         <td>".$row["harga"]."</td>
                         <td>".$row["nama_kategori"]."</td>
-                        <td><a href='edit_mobil.php?id=".$row["id_mobil"]."'>Edit</a> | <a href='hapus_mobil.php?id=".$row["id_mobil"]."' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a></td>
+                        <td><a class='btn' href='edit_mobil.php?id=".$row["id_mobil"]."'>Edit</a> | <a class='btn' href='hapus_mobil.php?id=".$row["id_mobil"]."' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a></td>
                     </tr>";
                     }
                 } else {
