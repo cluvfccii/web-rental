@@ -43,7 +43,7 @@ session_start();
       <a href="#about">About</a>
       <a href="#menu">Our Time</a>
       <a href="datamobil.html">Data mobil</a></a>
-      <a href="datakostumer.html">Data kostumer</a>
+      <a href="dasbor.php">Dasbor</a>
       <a href="#contact">Contact</a>
       
       <?php

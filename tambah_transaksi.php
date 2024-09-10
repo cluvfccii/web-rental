@@ -11,8 +11,7 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
-tr:hover {background-color: #438BD3;
-}
+
 .sidebar {
             height: 100%;
             width: 250px;
@@ -112,7 +111,7 @@ tr:hover {background-color: #438BD3;
             </div>
         </div>
         <h1>Data Transaksi</h1>
-        <a class="btn1" href="transaksi.php">+ Tambah Data Transaksi</a>
+        <a class="btn1" href="transaksi.php">+ Tambah Data </a>
 <?php
 include 'koneksi.php';
 
@@ -124,7 +123,7 @@ $sql = "SELECT transaksi.id_transaksi, mobil.nama_mobil, customer.nama_customer,
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table border='1'><tr><th>ID Transaksi</th><th>Merk Mobil</th><th>Nama Customer</th><th>Tanggal Sewa</th><th>Tanggal Kembali</th></tr>";
+    echo "<table border='1'><tr><th>ID Transaksi</th><th>Merk Mobil</th><th>Nama Customer</th><th>Tanggal Sewa</th><th>Tanggal Kembali</th><th>aksi</tr>";
     while($row = $result->fetch_assoc()) {
         echo "<tr>
             <td>".$row["id_transaksi"]."</td>
@@ -132,6 +131,7 @@ if ($result->num_rows > 0) {
             <td>".$row["nama_customer"]."</td>
             <td>".$row["tgl_sewa"]."</td> 
             <td>".$row["tgl_kembali"]."</td>
+            <td><a class='btn1' href='hapus_transaksi.php?id=".$row["id_transaksi"]."'>Hapus</a>
         </tr>";
     }
     echo "</table>";
